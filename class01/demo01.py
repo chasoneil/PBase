@@ -1,40 +1,63 @@
-# 1. 单行注释与多行注释
-# 2. 变量赋值 变量不用声明，直接赋值
-# 3. 使用缩进代替代码块
-# 4. 多行语句代码拼接
+# 1. python 的 print
+# 2. python 的用户输入 input
+# 3. python 的数据类型
+# 4. 逻辑运算符
 
-'''
-多行注释方法1
-'''
+# print 中使用逗号可以分别输出多个字符串 遇到,会补充一个空格
+print('Hello', 'Python', 'Over')   # result: Hello Python Over
 
-"""
-多行注释方法2
-"""
+print('1 + 2 =', 1+2)
 
-# 变量赋值 没有数据类型，同一个变量可以赋值不同类型的数据
-a = 10
-b = 20
-c = a + b
-print(c)
-print("=========================")
+print('01----------------------')
 
-a = "Hello, python!"
-print(a)
+# 使用input获取用户输入，回车结束
+name = input()
+print('Hello', name)
 
-# 多变量赋值
-x, y, z = 10, 20, "python"
-print(x, y, z)
+# 也可以在input中加入提示词
+name = input('Please input your name:')
+print('Hello', name)
 
+print('02----------------------')
 
-# 缩进代替代码块
-if c > 10:
-    print("c is greater than 10")
+# python的数据类型： 整数  浮点数 字符串 布尔 空值
+x = 10  # 整数
+print('x =', x)
+
+pi = 3.14
+print('pi = ', pi)
+
+# python 中使用 '' / "" / ''' '''/ 来表示字符串
+print('single str')
+print("double str")
+print('''long
+str''')
+
+print('I\'m Chinese')  # 有些字符需要转义
+
+print(r'\\\\t1')  # 使用 r可以让转义失效
+
+print('03----------------------')
+
+# python 中的布尔值是 True False
+if True:
+    print(True)
 else:
-    print("c is less than or equal to 10")
+    print(False)
 
+# python中使用None表示空值
 
-# 多行语句代码拼接
-str = "This is first line;" + \
-      " This is second line;" + \
-      " This is third line;"
-print(str)
+print('04----------------------')
+
+# python 中使用and or not来代表与或非
+
+if True and True:
+    print('double true')
+
+if True or False:
+    print('has true')
+
+if not True:
+    print('not true')
+else:
+    print('not false')

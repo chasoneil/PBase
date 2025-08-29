@@ -1,24 +1,4 @@
-# 1. String 字符串类型
-
-# python中 单引号 = 双引号
-str1 = 'Hello, python1'
-str2 = "Hello, python2"
-print(str1)
-print(str2)
-
-# \表示转义符
-str3 = "Hello, \n python3"
-print(str3)
-
-# r 表示让转义符失效，例如下面的\n会直接输出
-str4 = r"Hello, \n python4"
-print(str4)
-
-# 使用 + 做字符串拼接 使用 * 做重复拼接
-str5 = "Hello, "
-str6 = "python"
-print(str5 + str6)
-print(str6 * 2)
+# 1. String 字符串
 
 # 字符串切割
 str = "0123456789"
@@ -27,3 +7,24 @@ print(str[5:]) # 切割从第5个开始到最后的字符串
 print(str[:5]) # 切割从第0个开始到第5个结束的字符串
 print(str[::2]) # 切割从第0个开始到最后的字符串，每隔2个取一个
 print(str[::-1]) # 切割从最后一个开始到第一个结束的字符串，步长为-1
+
+print('01------------------------')
+
+# 常见的字符串函数
+name = 'chason'
+print('name length:', len(name)) # 获取字符串长度
+
+print('02------------------------')
+
+# 字符串格式化: 使用 % 进行指定拼接，如果有多个数据，需要用()括起来
+print('Hello, My name is %s, my score is: %d' % ('chason', 100))
+
+print('My name is: %s' % 'fox')
+
+print('%.2f' % 3.1415)  # result: 3.14
+
+print('03------------------------')
+
+# 字符串的第二种的格式化 format
+
+print('Hello, My name is:{0}, my score is: {1:.2f}'.format('chason', 99.8887))
