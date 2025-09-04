@@ -25,6 +25,6 @@ print('%.2f' % 3.1415)  # result: 3.14
 
 print('03------------------------')
 
-# 字符串的第二种的格式化 format
+# 字符串的第二种的格式化 format()
 
 print('Hello, My name is:{0}, my score is: {1:.2f}'.format('chason', 99.8887))
