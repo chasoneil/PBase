@@ -1,47 +1,46 @@
-# python 中的函数
-# 函数的概念和其他语言一样
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
+# python 中的函数
+# 1. 基础的函数定义和使用
+# 2. 函数的参数
+
+# 1. 系统函数，函数怎么使用
+print('1. 系统函数:')
 print('绝对值:', abs(-10))
 print('最大值:', max(1, 2, 3, -4))     # 可变参数列表
-
 print('1000的16进制:', hex(1000))
 
-print('01 ----------------------')
-
+print('2. 函数参数化:')
 # python 中函数名可以给变量 这点和JS类似
-
 a = abs
 print('绝对值:', a(-10))
 
-print('02 ----------------------')
-
 # 定义函数: 使用def fun_name(param list) :
-
+print('3. 定义函数:')
 def get_max(a, b):
     return max(a, b)
 
 print('get_max:',get_max(3, 4))
 
 # 没有return的结果，返回的就是None
-
+print('4. 如果函数没有return，那默认返回None')
 def no_ret():
     print('no_ret 执行')
 
 print('no_ret:', no_ret())
 
 # 如果函数什么都不做，可以使用空函数 pass
-
+print('5. 空函数 pass')
 def do_nothing():
     pass
 
 do_nothing()
 
-print('03 ----------------------')
-
 # python 可以返回多个值
-
+print('6. 返回多个值:')
 def get_point(x, y, move_x, move_y):
-    return x + move_x, y + move_y       # 返回多个结果
+    return x + move_x, y + move_y       # 返回多个结果,中间通过,隔开
 
 x1, y1 = get_point(0, 0, 1, 1)
 print('新的坐标:', x1, y1)
@@ -50,10 +49,12 @@ print('新的坐标:', x1, y1)
 r = get_point(0, 0, 2, 2)
 print('单个参数表示坐标:', r)       # (2, 2)  返回的其实是一个tuple
 
-print('04 ----------------------')
+print('01 ----------------------\n')
 
-# 给函数的参数设置默认值
+# 2. 函数的参数
 
+# 1. 给函数的参数设置默认值
+print('1. 参数设置默认值:')
 def power(x, n=2):      # 当没有给n的值，那么默认就是2次方, 必选参数必须在前
     res = 1
     while n > 0:
@@ -65,7 +66,7 @@ print('默认求平方:', power(2))
 print('求多次方:', power(2, 4))
 
 # 函数的默认值参数的其他用法
-
+print('2. 指定特定参数的默认值:')
 def print_student_msg(name, age, gender='M', addr='Shanghai'):
     print('name:', name)
     print('age:', age)
@@ -73,26 +74,22 @@ def print_student_msg(name, age, gender='M', addr='Shanghai'):
     print('addr:', addr)
     print('----end----')
 
-print('04 ----------------------')
-
 # print_student_msg('ceshi') 报错，因为没有给默认参数的就是必须参数
-
 print_student_msg('zhangsan', 18)   # 非必要参数可以不传
-
 print_student_msg('lisi', 20, 'F', 'Beijing')  # 传入所有非必要参数
-
 print_student_msg('wangwu', 21, addr='Guangzhou')   # 也可以只传入对应的非必要参数
 
-print('05 ----------------------')
-
-# 参数是list tuple等特殊
+# 参数也可以是list tuple 等特殊类型
+print('3. 参数是list:')
 def print_list(l):
     print(l)
 
 list1 = [1, 2, 3]
 print_list(list1)
 
-def add_end(l=[]):  # 默认参数如果是可变的，会出现问题
+# 注意： 如果将参数的默认值设置为可变的，可能会出问题
+print('4. 参数是默认值可能发生问题:')
+def add_end(l=[]):  # 默认参数是list, 可变
     l.append('END')
     return l
 
@@ -109,13 +106,10 @@ def add_end1(l=None):
 print(add_end1())
 print(add_end1())
 
-print('06 ----------------------')
-
 # python 支持可变参数
-
 # 例: 求 任意 n个数的和 a + b + c + d...
 # 可以通过传入list 或者 tuple的形式
-
+print('5. 可变参数:')
 def get_sum1(numbers):
     sum = 0
     for n in numbers:
