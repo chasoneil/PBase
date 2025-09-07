@@ -108,8 +108,10 @@ print(add_end1())
 
 # python 支持可变参数
 # 例: 求 任意 n个数的和 a + b + c + d...
-# 可以通过传入list 或者 tuple的形式
+
+# 1.可以通过传入list 或者 tuple的形式
 print('5. 可变参数:')
+print('5.1 使用list 和 tuple可以传入多个数据')
 def get_sum1(numbers):
     sum = 0
     for n in numbers:
@@ -119,22 +121,23 @@ def get_sum1(numbers):
 print('get_sum1:', get_sum1([1, 2, 3, 4]))
 print('get_sum1:', get_sum1((2, 3, 4, 5)))
 
-# 可以通过可变参数的形式
-
+# 2. 使用可变参数的形式 使用方法是在参数名称前加上 *
+print('5.2 使用可变参数可以传入多个参数:')
 def get_sum2(*numbers):         # 函数本质上接收了一个tuple
     sum = 0
     for n in numbers:
         sum += n
     return sum
 
+# 可变参数支持一次性传入多个参数
 print('get_sum2:', get_sum2(1, 2, 3, 4))
 
 # 允许在list和tuple前 加上一个 * 让list和tuple变成可变参数
-
+print('5.3 python支持将list和tuple转变成可变参数')
 list1 = [1, 2, 3]
-print('as params:', get_sum2(*list1))
+print('list to params:', get_sum2(*list1))
 
-print('07 ----------------------')
+print('02 ----------------------\n')
 
 # 关键字参数 提供一组可变长度的带参数名的参数列表
 # 关键字参数使用 ** 的方法 接收的是dict
