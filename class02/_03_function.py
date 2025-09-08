@@ -2,8 +2,17 @@
 # -*- coding: utf-8 -*-
 
 # python 中的函数
-# 1. 基础的函数定义和使用
+# 1. 函数定义和使用
+#   基础函数的定义和使用
+#   函数参数化
+#   定义函数
+#   函数返回值
+#   空函数
 # 2. 函数的参数
+#   参数设置默认值(含指定参数)
+#   可变参数
+#   关键字参数 定义和使用
+# 3. 递归函数
 
 # 1. 系统函数，函数怎么使用
 print('1. 系统函数:')
@@ -141,6 +150,8 @@ print('02 ----------------------\n')
 
 # 关键字参数 提供一组可变长度的带参数名的参数列表
 # 关键字参数使用 ** 的方法 接收的是dict
+print('6. 关键字参数:')
+print('6.1 关键字参数的定义:')
 def print_param(name, age, **kw):
     print('name:', name)
     print('age:', age)
@@ -149,21 +160,26 @@ def print_param(name, age, **kw):
 print_param('abc', 19)
 print_param('abc', 19, sex='f')
 
-print('08 ----------------------')
 # 命名关键字函数，关键字函数的一种
 # 传入的函数的关键字被指定为必须，如果没有这些关键字函数，会报错
-
+print('6.2 命名关键字参数:')
 def param_name(p1, p2, *, need1, need2):    # 必须要有 need1 和 need2
     print(p1, p2)
     print(need1, need2)
 
 param_name('a', 'b', need1='c', need2='d')
 
-print('09 ----------------------')
+# 如果参数中已经有可变参数，那么后续的关键字参数命名可以不用带 *, 但是要注意顺序
+print('6.3 可变参数和关键字参数命名的混合使用:')
+def print_param1(name, age, *args, need1, need2) :
+    print('name:', name, 'age:', age, 'args:', args)
+    print('need1:', need1, 'need2:', need2)
 
+print_param1('lucy', 18, 3, 4, 5, need1='abc', need2='bcd')
+
+print('03 ----------------------\n')
 # 递归函数
 # 求 1- n的阶乘
-
 def fac(n):
     if n == 1:
         return 1
