@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# 1. dict 字典 python中的字典 等同于 HashMap 或者 Hashtable
+# 1. dict 字典 python中的字典 等同于Map
 # 使用 key-value 形式存储数据，key 必须是不可变对象，value 可以是任意对象
 # 2. Set 是一组key的集合
 
@@ -17,7 +17,7 @@ print(dict2)
 
 print("dict2 length:", len(dict2))  # 字典长度是一个键值对算一个
 
-# 通过key获取value
+# 通过key获取value 获取方式跟数组有点相似 ['xxx']
 print('通过key获取value')
 print('name:', dict2['name'])
 

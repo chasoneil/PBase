@@ -32,6 +32,17 @@ for ele in arr:
         continue
     print(ele)
 
+# while 循环的案例
+i = 0
+while i < 3:
+    print(i)
+    i += 1
+
+# 注意: python 没有 do while 循环
+
+
+
+
 
 
 

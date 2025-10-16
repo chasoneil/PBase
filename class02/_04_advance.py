@@ -8,7 +8,7 @@
 #   string的切片
 # 2. 迭代
 #   如何判断是否可以迭代
-# 3. 列表生成式 todo
+# 3. 列表生成式 python 内部用来生成列表的
 # 4. 生成器 todo
 # 5. 迭代器 todo
 
@@ -61,3 +61,39 @@ for index, val in enumerate(tuple1):
 print('3. 单次迭代多个元素:')
 for x, y in [(1, 2), (2, 4), (4, 8)]:
     print(x, y)
+
+print('--------------01--------------')
+
+# 列表生成式
+# 使用 list() 配合 range 快速生成列表
+
+tmp_list1 = list(range(5))  # 生成 [0, 5) 的列表
+print(tmp_list1)        # [0, 1, 2, 3, 4]
+
+# 正式的列表生成式 使用 []
+# 例子: 生成 [1*1, 2*2, 3*3, ... 10 *10] 的列表，方法一使用循环
+tmp_list2 = []
+for i in range(11):
+    tmp_list2.append(i*i)
+print(tmp_list2)
+
+# 方法二：使用列表生成式
+tmp_list3 = [x * x for x in range(0,11)]
+print(tmp_list3)
+
+# 列表生成式中可以有多个循环
+tmp_list4 = [m + n for m in 'ABC' for n in 'XYZ']
+print(tmp_list4)       # ['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
+
+# 使用列表生成式迭代一个 dict
+d = {'a': 'A', 'b': 'B', 'c': 'C'}
+tmp_list5 = [k + '=' + v for k, v in d.items()]     # 注意 k v都是String 才能使用 +
+print(tmp_list5)                    # ['a=A', 'b=B', 'c=C']
+
+# 列表生成式中还可以加判断
+tmp_list6 = [x for x in range(11) if x % 2 == 0]
+print(tmp_list6)        # [0, 2, 4, 6, 8, 10]
+
+
+
+

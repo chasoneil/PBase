@@ -1,6 +1,5 @@
 # python 循环测试
 
-
 # range(a, b) 表示生成 [a, b) 的整数序列
 # range(m) 表示生成 [0,m) 的整数
 
