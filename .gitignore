@@ -1,5 +1,0 @@
-.gitignore
-.idea/*
-
-web/_02_flask/.venv
-web/_02_flask/uv.lock
