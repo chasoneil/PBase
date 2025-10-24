@@ -1,10 +1,16 @@
-# python 的IO
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-# 1. print
+# 控制台输入输出
+
+# 1. print console output
 def demo1():
     print("Hello, Python")
-    # when we use python3, It's error usage.
-    # print "Hello, Python"
+    # 使用 , 输出拼接的字符串
+    name = 'zhangsan'
+    print('My name is', name)
+    # 输出中可以包含运算
+    print('1 + 2 =', 1+2)
 
 # 2. we use input(); raw_input() [python2] to get input from user
 def demo2():
@@ -13,13 +19,12 @@ def demo2():
     # in python2 we could use like this:
     # content = raw_input("请输入:")
 
-# 3. we use open() to open a file from local
+# 如果不需要提示词，也可以直接使用input()
 def demo3():
-    f = open("D:/temp/text.txt", "r")  # read only
-    print(f.name)  # print file name
-    print(f.mode)  # file mode
-    # we use close() to close file
-    f.close()
+    name = input()
+    print('Your name:', name)
+
+
 
 # 4. we use write() to write something to file
 def demo4():
@@ -28,13 +33,7 @@ def demo4():
     print("write done")
     f.close()
 
-# 5. we use read() to read content from file
-# we can read binary file and other characters strings ...
-def demo5():
-    f = open("D:/temp/py1.txt", "r")
-    content = f.read(10)  # we read 10 characters
-    print("read:", content)
-    f.close()
+
 
 # second read is after the first read,so the file pointer is important!
 # demo5() # read: Hello, Pyt
@@ -100,7 +99,12 @@ def demo12():
     shutil.rmtree("D:/temp/py") # delete dir and all files inside
     print("delete dir")
 
-demo12()
+if __name__ == '__main__':
+    #demo1()
+    #demo2()
+    demo3()
+
+
 
 
 
