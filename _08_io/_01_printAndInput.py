@@ -24,28 +24,6 @@ def demo3():
     name = input()
     print('Your name:', name)
 
-
-
-# 4. we use write() to write something to file
-def demo4():
-    f = open("D:/temp/py1.txt", "w")  # create file
-    f.write("Hello, Python. \nWe use python write to write content.\n")
-    print("write done")
-    f.close()
-
-
-
-# second read is after the first read,so the file pointer is important!
-# demo5() # read: Hello, Pyt
-
-def demo6():
-    f = open("D:/temp/py1.txt", "r")
-    content = f.read()
-    print(content)
-    f.close()
-
-#demo6()
-
 # 6. we use tell() to get file position
 # we use seek to set pointer to file start
 def demo7():
@@ -58,8 +36,6 @@ def demo7():
     print("position:", p)
     f.close()
 
-# demo7()
-
 # 7. rename and delete file
 import os
 
@@ -68,8 +44,6 @@ def demo8():
     # src filename, new filename
     os.rename("D:/temp/py1.txt", "D:/temp/py2.txt")
     print("rename file")
-
-# demo8()
 
 # we use os.remove() to delete file
 def demo9():
