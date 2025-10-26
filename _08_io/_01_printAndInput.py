@@ -24,54 +24,7 @@ def demo3():
     name = input()
     print('Your name:', name)
 
-# 6. we use tell() to get file position
-# we use seek to set pointer to file start
-def demo7():
-    f = open("D:/temp/py1.txt", "r")
-    content1 = f.read(10)
-    p = f.tell()
-    print("position:", p)
-    f.seek(0, 0)
-    p = f.tell()
-    print("position:", p)
-    f.close()
 
-# 7. rename and delete file
-import os
-
-# we use os -> rename() to rename file
-def demo8():
-    # src filename, new filename
-    os.rename("D:/temp/py1.txt", "D:/temp/py2.txt")
-    print("rename file")
-
-# we use os.remove() to delete file
-def demo9():
-    os.remove("D:/temp/py2.txt")
-    print("delete file")
-
-# demo9()
-
-# 8. create dir and delete dir
-# we use os.mkdir() to create dir
-
-def demo10():
-    os.mkdir("D:/temp/py")
-    print("create dir")
-
-# demo10()
-
-# delete empty dir
-def demo11():
-    os.rmdir("D:/temp/py") # if dir is not empty, program will throw error
-    print("delete dir")
-
-# demo11()
-
-import shutil
-def demo12():
-    shutil.rmtree("D:/temp/py") # delete dir and all files inside
-    print("delete dir")
 
 if __name__ == '__main__':
     #demo1()

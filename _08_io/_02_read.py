@@ -107,6 +107,17 @@ def demo12():
     with open('test1.txt', 'r', encoding='gbk') as f:
         print(f.read())
 
+# 6. we use tell() to get file position
+# we use seek to set pointer to file start
+def demo13():
+    with open('test.txt', 'r', encoding='utf-8') as f:
+        content1 = f.read(10)
+        p = f.tell()
+        print("position:", p)
+        f.seek(0, 0)
+        p = f.tell()
+        print("position:", p)
+
 if __name__ == '__main__':
     # demo1()
     # demo2()
@@ -119,5 +130,6 @@ if __name__ == '__main__':
     # demo9()
     # demo10()
     # demo11()
-    demo12()
+    # demo12()
+    demo13()
 
