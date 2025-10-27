@@ -1,0 +1,239 @@
+<html>
+
+<head>
+    <title>从这里开始</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    <style type="text/css">
+        .category {
+            margin: 0px auto;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 2px;
+        }
+
+        .categoryhr {
+            border-bottom: #FF0000 2px solid;
+            border-left: #FF0000 2px solid;
+            border-top: #FF0000 2px solid;
+            border-right: #FF0000 2px solid;
+            overflow: hidden;
+        }
+
+        .categoryfor {
+            text-align: center;
+            margin-top: 20px;
+            color: #556666;
+        }
+
+        .categoryfor A:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+        .list {
+            margin : 1px;
+            width : 100%;
+            overflow: hidden;
+        }
+
+        .title {
+            line-height: 26px;
+            padding-left: 12px;
+            background: #eef7ff;
+            height: 27px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .list UL {
+            padding-left: 10px;
+            padding-right: 12px;
+            background: #FCFEFC;
+        }
+
+        .list LI {
+            list-style-type: none;
+            width: 170px;
+            float: left;
+            list-style-image: none;
+        }
+
+        .list LI2 {
+            list-style-type: none;
+            width: 200px;
+            float: left;
+            list-style-image: none;
+        }
+
+        .list LI3 {
+            list-style-type: none;
+            width: 400px;
+            float: left;
+            list-style-image: none;
+        }
+
+        .list A {
+            text-align: left;
+            line-height: 30px;
+            letter-spacing: 1px;
+            color: #04529C;
+            font-size: 14px;
+        }
+
+        .list A:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .time {
+            color: gray;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function showDate() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            if (month < 10) {
+                month = "0" + month;
+            }
+            var date = today.getDate();
+            if (date < 10) {
+                date = "0" + date;
+            }
+            var hour = today.getHours();
+            if (hour < 10) {
+                hour = "0" + hour;
+            }
+            var minute = today.getMinutes();
+            if (minute < 10) {
+                minute = "0" + minute;
+            }
+            var secords = today.getSeconds();
+            if (secords < 10) {
+                secords = "0" + secords;
+            }
+
+            var strDate = (year + "-" + month + "-" + date + "<br>" + hour + " : " + minute + " : " + secords);
+            document.getElementById("date").innerHTML =  strDate;
+        }
+
+        window.setInterval("showDate()", 1000);
+    </script>
+
+</head>
+
+<body onload="showDate()">
+
+    <table width="100%">
+        <tr>
+            <td>
+                <div>
+                    <form action="https://cn.bing.com/" target="_blank">
+                        <a href="https://cn.bing.com/" style="text-decoration: none" target="_blank">
+                            <img src="https://logincdn.msftauth.net/shared/1.0/content/images/applogos/73_ef9a283dfe21abb4c5bc64347702f90b.png" alt="Bing" align="top" border="0">
+                        </a>
+                        <input type="text" name="q" style="height: 35px; width: 60%; border-radius: 3px;padding-left: 5px;">
+                        <input type="submit" style="height: 35px; border-radius: 3px;" value="search">
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <form action="https://www.baidu.com/baidu" target="_blank">
+                        <a href="https://www.baidu.com/" style="text-decoration: none" target="_blank">
+                            <img src="https://img.baidu.com/img/logo-80px.gif" alt="Bing" align="top" border="0">
+                        </a>
+                        <input type="text" name="w" style="height: 35px; width: 60%; border-radius: 3px; padding-left: 5px;">
+                        <input type="submit" style="height: 35px; border-radius: 3px;" value="search">
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <form action="http://dict.cn/search" target="_blank">
+                        <input type="text" id="q" name="q" value="" placeholder="please input English/Chinese words"  style="height: 35px; width: 60%; border-radius: 3px; padding-left: 5px;" x-webkit-speech>
+                        <input type="submit" id="s" style="height: 35px; border-radius: 3px;" title="Words" value="search">
+                    </form>
+                </div>
+            </td>
+            <td align="center">
+                <div class="time" id="date"></div>
+            </td>
+        </tr>
+    </table>
+    <div class="category">
+        <div class="list">
+            <h3 class="title">常用网站</h3>
+            <ul>
+				<li><a href="https://www.google.com/" target="_blank">Google</a></li>
+                <li><a href="https://www.bilibili.com" target="_blank">bilibili</a></li>
+                <li><a href="https://study.izaodao.com/learnCenter/index.html?lang=0#/learnHome" target="_blank">早道网课中心</a></li>
+                <li><a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a></li>
+                <li><a href="https://www.mashibing.com/?isLogin=1" target="_blank">马士兵</a></li>
+                
+                <li><a href="https://github.com/" target="_blank">Github</a></li>
+                <li><a href="https://liaoxuefeng.com/" target="_blank">廖雪峰官网</a></li>
+                <li><a href="https://juejin.cn/" target="_blank">稀土掘金</a></li>
+                <li><a href="https://book.kotlincn.net/" target="_blank">kotlin中文站</a></li>
+				<li><a href="https://c.biancheng.net/" target="_blank">C语言中文网</a></li>
+                <li><a herf="https://cuihairu.github.io/hello-cxx/overview/index.html">C++免费教程</a></li>
+				<li><a href="https://www.youdao.com/" target="_blank">有道词典</a></li>
+				<li><a href="https://leetcode.com/" target="_blank">leetcode-ENG</a></li>
+				<li><a href="https://www.jyshare.com/quiz/" target="_blank">菜鸟测验中心</a></li>
+                <li><a href="https://geek-docs.com/" target="_blank">极客教程</a></li>
+                <li><a href="https://www.poloxue.com/backtrader/" target="_blank">backtrader教程</a></li>    
+            </ul>
+        </div>
+        
+        <div class="list">
+            <h3 class="title">官方网站</h3>
+            <ul>
+                <li><a href="https://njp.izaodao.com/" target="_blank">早道官网</a></li>
+                <li><a href="https://pythontutor.com/" target="_blank">代码可视化</a></li>
+				<li><a href="https://www.hello-algo.com/" target="_blank">算法宇宙</a></li>
+                <li><a href="https://www.postgresql.org/ftp/source/" target="_blank">PG源码</a></li>  
+                <li><a href="https://www.mysql.com/" target="_blank">MySQL</a></li>
+                <li><a href="https://mvnrepository.com/" target="_blank">Maven Repository</a></li>
+                <li><a href="https://chat.openai.com/" target="_blank">ChatGpt</a></li>
+                <li><a href="https://mail.126.com/js6/main.jsp?sid=hFgjnzJBRavrvqLJLuBBadWoqLcQtOCB&df=webmail126#module=welcome.WelcomeModule%7C%7B%7D" target="_blank">网易126邮箱</a></li>
+                <li><a href="https://www.processon.com/diagrams" target="_blank">Process On</a></li>
+                <li><a href="https://leetcode.cn/" target="_blank">LeetCode-CN</a></li>
+                <li><a href="https://visualgo.net/zh" target="_blank">visualgo算法可视化</a></li>
+                <li><a href="https://programmercarl.com/" target="_blank">代码随想录</a></li>
+                <li><a href="https://edu.51cto.com/center/wejob/user/course?train_id=956" target="_blank">51CTO班级中心</a></li>
+                <li><a href="https://www.ithere.net/" target="_blank">书阙</a></li>
+                <li><a href="https://v2.cn.vuejs.org/v2/guide/" target="_blank">Vue中文网</a></li>
+                <li><a href="https://www.byhy.net/" target="_blank">白月黑羽教程(Python&JS)</a></li>
+            </ul>
+        </div>
+
+        <div class="list">
+            <h3 class="title">常用书籍</h3>
+            <ul>
+				<li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/index.html" target="_blank">JDK11</a></li>
+			
+                <li><a href="https://juejin.cn/book/6844733769996304392" target="_blank">《MySQL是怎样运行的》</a></li>
+                <li><a href="https://github.com/fuzhengwei/RoadMap" target="_blank">Java后端开发技能树</a></li>
+                <li><a href="https://wxy0327.blog.csdn.net/" target="_blank">wxy的博客</a></li>
+                <li><a href="https://blog.csdn.net/xiaoxianer321/article/details/120407071" target="_blank">Java GUI</a></li>
+            </ul>
+        </div>
+
+        <div class="list">
+            <h3 class="title">其他网站</h3>
+            <ul>
+                <li><a href="https://www.grimtools.com/calc/" target="_blank">Grim Dawn Tools</a></li>
+                <li><a href="https://www.expreview.com/" target="_blank">超能网</a></li>
+                <li><a href="https://sg.indeed.com/" target="_blank">indeed-Singapore</a></li>
+                <li><a href="https://www.ctrip.com/" target="_blank">携程</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

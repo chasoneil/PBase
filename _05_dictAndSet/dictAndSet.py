@@ -6,25 +6,31 @@
 # 2. Set 是一组key的集合
 
 # 1. 创建字典
-def test1():
+def demo1():
     dict1 = {}
     print(dict1)
+
+def demo1_1():
+    # dict 是一个对象，通过对象直接初始化
+    d = dict({'name': 'zhang', 'age': 20})
+    print(d)
+    print(d.get('name'))
 
 # key 必须是不可变对象 字符串数字等都是不可变对象
 dict2 = {"name":"chason", "age": 20, 1: 20}
 
 # 2. 字典的键值对获取和设置
-def test2():
+def demo2():
     print(dict2)
     print("dict2 length:", len(dict2))  # 字典长度是一个键值对算一个
     # 2.1 通过key获取value 获取方式跟数组有点相似 ['xxx']
     print('name:', dict2['name'])
 
-def test2_1():
+def demo2_1():
     # 使用 [] 获取不存在的key 会报错
     try:
         print(dict2['abc'])
-    except BaseException:
+    except KeyError:
         print('key 不存在')
 
     # 使用 get() 则不会
@@ -36,41 +42,41 @@ def test2_1():
     # 使用对象属性的方式
     # print(dict2.abc)  发生异常，不能用这种方式调用
 
-def test3():
+def demo3():
     # 修改字典的value
     dict2['age'] = 25
     print(dict2)
 
-def test4():
+def demo4():
     # 删除字典的元素
     del dict2[1]
     print(dict2)
 
 # 5.也可以通过pop删除
-def test5():
+def demo5():
     d1 = {'a': 1, 'b': 2, 'c': 3}
     print('删除前:', d1)
     d1.pop('b')
     print('删除后:', d1)
 
 # 6. 使用循环获取dict元素
-def test6():
+def demo6():
     dict3 = {'name': 'chason', 'age': 20, 'score': 90.5}
     for key in dict3:
-        print(key)
+        print(key,":", dict3.get(key))
 
-# set
-def test7():
+# Set
+def demo7():
     s1 = {1, 2, 3} # 创建一个set
     print(s1)
 
 # 8 set会自动过滤重复元素
-def test8():
+def demo8():
     s2 = {1, 2, 3, 2, 1}
     print(s2)  # {1, 2, 3}
 
 # 9. 使用 add() 和 remove() 添加或删除元素
-def test9():
+def demo9():
     s3 = {'a', 'b', 'c'}
     print(s3)
     s3.add('m')     # 添加元素的位置不是有序的
@@ -79,7 +85,7 @@ def test9():
     print(s3)
 
 # 10 set 因为不重复元素 可以做交并补
-def test10():
+def demo10():
     s1 = {1, 2, 3}
     s2 = {2, 3, 4}
 
@@ -95,7 +101,9 @@ def test10():
     print(tt)
 
 if __name__ == '__main__':
-    # test1()
-    # test2()
-    # test2_1()
-    test3()
+    # demo1()
+    # demo2()
+    # demo2_1()
+    # demo3()
+    # demo1_1()
+    demo4()
