@@ -22,37 +22,9 @@ def demo2():
         f.write("Nice to meet you\n")
         f.close()
 
-# 使用os对文件进行处理
-def demo3():
-    os.rename('test.txt', 'test_new.txt')
-    print('文件重命名成功')
 
-# we use os.remove() to delete file
-def demo4():
-    os.remove("tmp.txt")
-    print("删除文件成功")
-
-# 8. create dir and delete dir
-# we use os.mkdir() to create dir
-def demo5():
-    os.mkdir("temp/")
-    print("创建文件夹成功")
-
-# delete empty dir
-def demo6():
-    os.rmdir("temp/")  # if dir is not empty, program will throw error
-    print("删除文件夹成功")
-
-import shutil
-def demo7():
-    shutil.rmtree("temp/d1") # delete dir and all files inside
-    print("删除文件夹下的子文件夹成功")
 
 if __name__ == '__main__':
     # demo1()
-    # demo2()
-    # demo3()
-    # demo4()
-    # demo5()
-    # demo6()
-    demo7()
+    demo2()
+
