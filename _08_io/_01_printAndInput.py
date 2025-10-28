@@ -24,8 +24,6 @@ def demo3():
     name = input()
     print('Your name:', name)
 
-
-
 if __name__ == '__main__':
     #demo1()
     #demo2()
