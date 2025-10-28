@@ -16,7 +16,7 @@ def demo1():
 
 # 查看当前目录的路径
 def demo2():
-    path = os.path.abspath('.')
+    path = os.path.abspath('')
     print(path)
 
 # 拼接和拆分目录
@@ -57,7 +57,7 @@ def demo8():
 # 列出当前文件夹下的所有内容
 # splitext可以获取文件的扩展名
 def demo9():
-    file_list = os.listdir('.')
+    file_list = os.listdir('')
     print(file_list)
     for f in file_list:
         if os.path.splitext(f)[1] == '.py':
