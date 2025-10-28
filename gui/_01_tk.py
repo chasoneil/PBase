@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 # python 的 GUI 并没有操作系统原生的GUI编程那么好用
 # 但是比Java好，目前还是推荐Java的 B/S 模式
 
