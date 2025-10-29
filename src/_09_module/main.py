@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 # 这个是主方法
 
 from pkg1.support1 import fun1
